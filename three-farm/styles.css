@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; overflow: hidden; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: #000; color: #fff; }
+
+#hud { position: fixed; inset: 0; pointer-events: none; }
+#top-bar { position: absolute; top: 12px; left: 12px; right: 12px; display: flex; gap: 16px; align-items: center; justify-content: flex-start; background: rgba(0,0,0,0.35); padding: 8px 12px; border-radius: 8px; backdrop-filter: blur(4px); }
+#crosshair { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 22px; opacity: 0.75; text-shadow: 0 0 6px rgba(0,0,0,0.6); }
+#prompt { position: absolute; left: 50%; bottom: 10%; transform: translateX(-50%); background: rgba(0,0,0,0.45); padding: 8px 12px; border-radius: 8px; min-width: 240px; text-align: center; opacity: 0; transition: opacity 0.15s; }
+
+#overlay { position: fixed; inset: 0; display: grid; place-items: center; background: radial-gradient(ellipse at center, rgba(0,0,0,0.7), rgba(0,0,0,0.95)); z-index: 10; }
+#overlay .panel { width: min(540px, 92vw); background: rgba(20,20,24,0.9); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.6); }
+#overlay h1 { margin: 0 0 8px 0; font-size: 28px; }
+#overlay p { margin: 0 0 10px 0; opacity: 0.9; }
+#overlay ul { margin: 10px 0 0 18px; opacity: 0.9; }
+
+.show { opacity: 1 !important; }
+
+canvas { display: block; }
